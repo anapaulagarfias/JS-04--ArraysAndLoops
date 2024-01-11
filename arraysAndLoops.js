@@ -1,6 +1,5 @@
 // Sum of Resistors in Series
  
-
 // Calculate the sum of all resistors connected in series.
 // Examples:
 // - `sumResitance([-1,5,6,3])` should return `"15 ohms"`. (|−1| + 5 + 6 + 3 = 15)
@@ -9,17 +8,13 @@
 
 // Note: This approach uses the absolute value of each resistance to ensure all values are positive.
 
-
-
-// console.log(numbers.length);
-
 // NOTAS:
 // Se debe crear un acumulador que en este caso será sumResistence
 // for tiene 3 condicionales o paramentros incio/condicional/num de pasos que va a dar 
 // Inicio: count = 0 (se le puede dar el valor que queramos dependiendo del valor de donde querramos empezar)
 // Condicional: se hace una comparación del tamaño del arreglo, por ello se cuenta cuántos elementos hay en un array
 // Num de pasos que va a dar: count++ = incremente; count-- = decremento estos dos elementos son iguales a index + 1 y index - 1 respectivamente 
-// También los incrementos se puoeden hacer de la siguiente manera: 
+// También los incrementos se pueden hacer de la siguiente manera: 
 // count += 5
 // count /= 3
 // count *= 6
@@ -30,18 +25,19 @@
 // 3. Ejecuta el contenido 
 // 4. Incremento o decremento count++
 
-let sumResitance= 0, numbers = [4, 9, 11, -9];
+let sumResistance = 0, numbers = [4, 9, 11, -9];
+// console.log(numbers.length);
 
 for (let count = 0; count < numbers.length; count++){
     // Contenido
-    let sumResitence = numbers[count]
-    if(sumResitence < 0){
-        sumResitence = sumResitence * -1;
+    let resistance = numbers[count]
+    if(resistance < 0){
+        resistance = resistance * (-1);
     }
-    sumResitance += numbers[count];
+    resistance = sumResistance += numbers[count];
 } 
 
-console.log(sumResitance);
+console.log(sumResistance);
 
 // Number divided into halves
  
@@ -120,6 +116,35 @@ console.log(secretName(["Paula", "Horacio", "Ana"]));
 // - `arrayMultiplos(2, 10)` should return `[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]`.
 // - `arrayMultiplos(17, 6)` should return `[17, 34, 51, 68, 85, 102]`.
  
+// 1. Obtener la cantidad total de usuarios 
+// 2. Calcular usuarios restantes eliminando del total los primeros 2
+// 3. Obtener los primeros 2
+// 4. Imprimir mensaje 
+
+const users = ["mockIng99", "J0eyPunch", "glassedFer"];
+
+function getLenght(arr) {
+    return arr.lenght;
+}
+
+function calcRemaning(total){
+    return total -2;
+}
+
+function getUsers(arr){
+    const users = arr[0] + arr[1];
+    return users;
+}
+
+function onlineStatus(arr) {
+    const total = getLenght(arr);
+    const rest = calcRemaning(total);
+    const firstUsers = getUsers(arr);
+
+    console.log("User: " + firstUsers + ", and" + rest + "are online");
+}
+
+onlineStatus(users);
 
 // Positive dominance in Array
  
@@ -132,6 +157,28 @@ console.log(secretName(["Paula", "Horacio", "Ana"]));
 // - `positiveDom([-1, -3, -5, 4, 6767])` should return `false`.
  
 
+// 1. Loop por cada elemento 
+// 2. Total de positivos 
+// 3. Cantidad total y dividir sobre 2
+// 4. Comparamos e imprimir Boolean
+
+const numArr = [-1000, -1, 50, 1, 2, 5];
+const negativeArr = [-1000, -1, -3, -6, 8, 2];
+
+function positiveArr (arr){
+    let positiveCount = 0;
+
+    arr.forEach((num) => {
+        positiveArr ++;
+    });
+    const mid = arr.lenght / 2;
+    return positiveArr > mid;
+}
+
+const res = positiveArr(negativeArr);
+console.log(res);
+
+
 // Antipodal Average
  
 
@@ -143,3 +190,4 @@ console.log(secretName(["Paula", "Horacio", "Ana"]));
 
 // Example:
 // - For the array `[1,2,3,5,22,6]`, the result should be `[3.5, 12, 4]`.
+
