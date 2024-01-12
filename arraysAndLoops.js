@@ -25,19 +25,20 @@
 // 3. Ejecuta el contenido 
 // 4. Incremento o decremento count++
 
-let sumResistance = 0, numbers = [4, 9, 11, -9];
-// console.log(numbers.length);
+// let sumResistance = 0, numbers = [4, 9, 11, 9];
 
-for (let count = 0; count < numbers.length; count++){
-    // Contenido
-    let resistance = numbers[count]
-    if(resistance < 0){
-        resistance = resistance * (-1);
-    }
-    resistance = sumResistance += numbers[count];
-} 
+// for (let count = 0; count < numbers.length; count++){
+//     let resistance = number[count] < 0 
+//     if(resistance < 0){
+//     //         resistance = resistance * (-1);
+//     //     }
 
-console.log(sumResistance);
+//     // sumResistance += resistance // Contenido
+
+//     sumResistance += numbers[count];
+// } 
+
+// console.log(sumResistance);
 
 // Number divided into halves
  
@@ -191,3 +192,18 @@ console.log(res);
 // Example:
 // - For the array `[1,2,3,5,22,6]`, the result should be `[3.5, 12, 4]`.
 
+
+const antipodalAverage = (arrayNumbers) => {
+    let totalLenght = arrayNumbers.length;
+    let arrayEnd = [];
+    let mid = Math.trunc(totalLenght / 2);
+    let array1 = arrayNumbers.slice(0, mid);
+    let array2 = arrayNumbers.slice(totalLenght % 2 === 0 ? mid : mid + 1, totalLenght).reverse();
+    for (let index = 0; index < mid; index++) {
+        arrayEnd.push((array1[index] + array2[index]) / 2);
+    }
+    return arrayEnd;
+};
+
+// console.log(antipodalAverage([1, 2, 3, 5, 22, 6]));
+console.log(antipodalAverage([1, 2, 3, 5, 22, 6, 8]));
