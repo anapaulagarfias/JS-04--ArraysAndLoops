@@ -25,20 +25,20 @@
 // 3. Ejecuta el contenido 
 // 4. Incremento o decremento count++
 
-// let sumResistance = 0, numbers = [4, 9, 11, 9];
+let sumResistance = 0, numbers = [-1,5,6,3];
 
-// for (let count = 0; count < numbers.length; count++){
-//     let resistance = number[count] < 0 
-//     if(resistance < 0){
-//     //         resistance = resistance * (-1);
-//     //     }
+for (let count = 0; count < numbers.length; count++){
+    if(numbers[count] < 0){
+        numbers[count] = numbers[count] * -1;
+        sumResistance += numbers[count];
+    }
+    else{
+        sumResistance += numbers[count]; // es lo mismo que sumResistance = sumResistance + numbers 
+    }
+    
+} 
 
-//     // sumResistance += resistance // Contenido
-
-//     sumResistance += numbers[count];
-// } 
-
-// console.log(sumResistance);
+console.log(sumResistance);
 
 // Number divided into halves
  
